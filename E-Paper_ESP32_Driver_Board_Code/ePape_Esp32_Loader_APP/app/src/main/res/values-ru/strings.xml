@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">e-Paper Esp32 Загрузчик</string>
+    <string name="bluetooth">блютуз</string>
+    <string name="nothing"></string>
+
+    <string name="scan">Подключение по блютуз</string>
+    <string name="file">Загрузить изображение</string>
+    <string name="disp">Тип дисплея</string>
+    <string name="filt">Цветовой фильтр</string>
+    <string name="upld">Отправить изображение</string>
+    <string name="wifi">Подключение по Wi-Fi</string>
+    <string name="chck">Проверить Wi-Fi соединение</string>
+    <string name="brws">Открыть в браузере</string>
+
+    <string name="txt_conn">Connected to:</string>
+    <string name="txt_load">Loaded:</string>
+    <string name="txt_slct">Selected:</string>
+    <string name="txt_upld">Uploaded:</string>
+
+    <string name="txt_BlackAndWhiteL">Уровень: монохромный</string>
+    <string name="txt_BlackWhiteRedL">Уровен: цветной</string>
+    <string name="txt_BlackAndWhiteD">Дизениг: монохромный</string>
+    <string name="txt_BlackWhiteRedD">Дизеринг: цветной</string>
+
+    <string name="btn_okey">Применить</string>
+    <string name="btn_back">Назад..</string>
+    <string name="btn_cncl">Отмена</string>
+
+    <string name="no_blue">Бюутуз устройство не выбрано</string>
+    <string name="no_pict">Изображение не выбрано</string>
+    <string name="no_disp">Тип дисплея не выбран</string>
+    <string name="no_filt">Цветовой фильтр не выбран</string>
+    <string name="no_addr">IP не определён</string>
+    <string name="no_conn">Соединение потеряно</string>
+
+    <string name="dlg_devs">Выберите устройство</string>
+    <string name="dlg_load">Выберите изображение</string>
+    <string name="dlg_disp">Выберите тип дисплея</string>
+    <string name="dlg_filt">Выберите цветовой фильтр</string>
+    <string name="dlg_send">Отправка изображения</string>
+    <string name="dlg_note">Предупреждение:</string>
+
+    <string name="failed_file">Загрузка не удалась</string>
+    <string name="failed_filt">Фильтрация не удалась</string>
+    <string name="failed_send">Отравка не удалась</string>
+
+    <string name="wait">Ожидаение завершения операции</string>
+    <string name="unav">Не удаётся осуществить соединение</string>
+    <string name="scnd"> сек.</string>
+</resources>

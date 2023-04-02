@@ -1,0 +1,23 @@
+2020-08-05: New 5.65inch F e-paper routine added
+2020-08-05: New 7.5inch HD e-Paper routine added
+2020-08-12: New 3.7inch  e-Paper routine added
+2020-08-12: New 2.66inch  e-Paper routine added
+2020-09-03: New 5.83inch B V2 e-Paper routine added
+2020-09-03: New 2.9inch B V2 e-Paper routine added
+2020-09-04: New 1.54inch B V2 e-Paper routine added
+2020-09-04: New 2.13inch B V3 e-Paper routine added
+2020-11-23: Updata 1.54inch V2 e-Paper routine.
+2020-11-27: Added 4.2inch B V2 e-paper routine.
+2020-12-01: Updata 7.5inch B V2 e-Paper routine.
+2020-12-03: New 2.66inch B e-Paper routine.
+2020-12-03: 2.9inch B V2 e-Paper was renamed 2.9inch B V3 e-Paper.
+2020-12-11: New 2.9inch V2 e-Paper routine added.
+2020-12-16: New 5.83inch V2 e-Paper routine added.
+2020-12-29: New 4.01inch F e-Paper routine added.
+2021-03-19: New 2.7inch B V2 e-Paper routine added.
+2021-07-29: Updata 7.5inch V2 e-Paper routine added.
+2021-10-28: Realize the compatibility of old and new versions of 1.54V2
+2021-11-03: Added new program 2.13-inch V3 e-paper routine.
+2022-04-26: Added new program 2.13-inch B V4 e-paper routine.
+2022-11-05: Added new program 2.7-inch V2 e-paper routine.
+2022-11-05: Added new program 3.52-inch e-paper routine.

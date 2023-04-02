@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        style="@style/mchV">
+        <Button
+            style="@style/btn"
+            android:text="@string/scan"
+            android:onClick="onScan"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_blue"
+            android:textColor="#000000"
+            android:text="@string/no_blue"/>
+        <View
+            style="@style/sepL"/>
+
+        <Button
+            android:id= "@+id/Button_disp"
+            style="@style/btn"
+            android:text="@string/disp"
+            android:onClick="onDisplay"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_disp"
+            android:textColor="#000000"
+            android:text="@string/no_disp"/>
+        <View
+            style="@style/sepL"/>
+
+        <Button
+            style="@style/btn"
+            android:id= "@+id/Button_file"
+            android:text="@string/file"
+            android:onClick="onLoad"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_file"
+            android:textColor="#000000"
+            android:text="@string/no_pict"/>
+        <ImageView
+            style="@style/txt"
+            android:id="@+id/pict_file"
+            android:scaleType="fitCenter"/>
+        <View
+            style="@style/sepL"/>
+
+
+        <Button
+            style="@style/btn"
+            android:text="@string/filt"
+            android:onClick="onFilter"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_filt"
+            android:textColor="#000000"
+            android:text="@string/no_filt"/>
+        <ImageView
+            style="@style/txt"
+            android:id="@+id/pict_filt" android:scaleType="fitCenter"/>
+        <View
+            style="@style/sepL"/>
+
+        <Button
+            style="@style/btn"
+            android:text="@string/upld"
+            android:onClick="onUpload"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_send"
+            android:textColor="#000000"
+            android:text="@string/nothing"/>
+    </LinearLayout>
+
+</ScrollView>

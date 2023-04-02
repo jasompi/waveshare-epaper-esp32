@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">e-Paper Esp32 Loader</string>
+    <string name="bluetooth">bluetooth</string>
+    <string name="nothing"></string>
+
+    <string name="scan">Bluetooth connection</string>
+    <string name="file">Load image file</string>
+    <string name="disp">Select display type</string>
+    <string name="filt">Select image filter</string>
+    <string name="upld">Upload image</string>
+    <string name="wifi">Wi-Fi connection</string>
+    <string name="chck">Check Wi-Fi connection</string>
+    <string name="brws">Open in browser</string>
+
+    <string name="txt_conn">Connected to:</string>
+    <string name="txt_load">Loaded:</string>
+    <string name="txt_slct">Selected:</string>
+    <string name="txt_upld">Uploaded:</string>
+
+    <string name="txt_BlackAndWhiteL">Level: mono</string>
+    <string name="txt_BlackWhiteRedL">Level: color</string>
+    <string name="txt_BlackAndWhiteD">Dithering: mono</string>
+    <string name="txt_BlackWhiteRedD">Dithering: color</string>
+
+    <string name="btn_okey">Ok</string>
+    <string name="btn_back">Back..</string>
+    <string name="btn_cncl">Cancel</string>
+
+    <string name="no_blue">Bluetooth device is not selected</string>
+    <string name="no_pict">Image file is not loaded</string>
+    <string name="no_disp">Display type is not selected</string>
+    <string name="no_filt">Image filter is not loaded</string>
+    <string name="no_addr">IP is not defined yet</string>
+    <string name="no_conn">Connection is lost</string>
+
+    <string name="dlg_devs">Bluetooth devices</string>
+    <string name="dlg_load">File browser</string>
+    <string name="dlg_disp">Select display type</string>
+    <string name="dlg_filt">Select image filter</string>
+    <string name="dlg_send">Uploaing</string>
+    <string name="dlg_note">Notification:</string>
+
+    <string name="failed_file">Loading is failed</string>
+    <string name="failed_filt">Filtering is failed</string>
+    <string name="failed_send">Uploading is failed</string>
+
+    <string name="wait">Wait please</string>
+    <string name="unav">Impossible to connect</string>
+    <string name="scnd"> sec.</string>
+</resources>

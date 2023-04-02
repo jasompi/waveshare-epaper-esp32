@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/wrpV" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/open_file_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/open_file_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+
+    <LinearLayout style="@style/wrpH">
+        <Button style="@style/btn50" android:text="@string/btn_back" android:onClick="onBack"  />
+        <Button style="@style/btn50" android:text="@string/btn_cncl" android:onClick="onCancel"/>
+    </LinearLayout>
+</LinearLayout>

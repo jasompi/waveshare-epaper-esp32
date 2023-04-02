@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">e-Paper Esp32 Loader</string>
+    <string name="bluetooth">蓝牙</string>
+    <string name="nothing"></string>
+
+    <string name="scan">连接蓝牙</string>
+    <string name="file">打开图像文件</string>
+    <string name="disp">选择墨水屏型号</string>
+    <string name="filt">选择图片处理算法</string>
+    <string name="upld">上传图像</string>
+    <string name="wifi">连接到wi-fi</string>
+    <string name="chck">检查Wi-Fi连接</string>
+    <string name="brws">在浏览器中打开</string>
+
+    <string name="txt_conn">连接到:</string>
+    <string name="txt_load">被装载:</string>
+    <string name="txt_slct">被选择:</string>
+    <string name="txt_upld">被卸载:</string>
+
+    <string name="txt_BlackAndWhiteL">黑白色阶算法</string>
+    <string name="txt_BlackWhiteRedL">彩色色阶算法</string>
+    <string name="txt_BlackAndWhiteD">黑白抖动算法</string>
+    <string name="txt_BlackWhiteRedD">彩色抖动算法</string>
+
+    <string name="btn_okey">确定</string>
+    <string name="btn_back">返回..</string>
+    <string name="btn_cncl">取消</string>
+
+    <string name="no_blue">没有选择蓝牙设备</string>
+    <string name="no_pict">没有选择图像文件</string>
+    <string name="no_disp">没有选择墨水屏型号</string>
+    <string name="no_filt">没有选择图片处理算法</string>
+    <string name="no_addr">IP没有被获取</string>
+    <string name="no_conn">没有连接</string>
+
+    <string name="dlg_devs">选择设备</string>
+    <string name="dlg_load">选择图像文件</string>
+    <string name="dlg_disp">选择墨水屏型号</string>
+    <string name="dlg_filt">选择图片处理算法</string>
+    <string name="dlg_send">上传</string>
+    <string name="dlg_note">警告:</string>
+
+    <string name="failed_file">Loading is failed</string>
+    <string name="failed_filt">Filtering is failed</string>
+    <string name="failed_send">Uploading is failed</string>
+
+    <string name="wait">等一下...</string>
+    <string name="unav">连接不了</string>
+    <string name="scnd">秒</string>
+</resources>

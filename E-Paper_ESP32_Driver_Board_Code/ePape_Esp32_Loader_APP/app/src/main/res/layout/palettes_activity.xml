@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/wrpV" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        style="@style/btn"
+        android:id="@+id/btn_wb_l"
+        android:text="@string/txt_BlackAndWhiteL"
+        android:onClick="onWhiteAndBlackLevelClick"/>
+
+    <Button
+        style="@style/btn"
+        android:id="@+id/btn_wbrl"
+        android:text="@string/txt_BlackWhiteRedL"
+        android:onClick="onWhiteBlackRedLevelClick"/>
+
+    <Button
+        style="@style/btn"
+        android:id="@+id/btn_wb_d"
+        android:text="@string/txt_BlackAndWhiteD"
+        android:onClick="onWhiteAndBlackDitheringClick"/>
+
+    <Button
+        style="@style/btn"
+        android:id="@+id/btn_wbrd"
+        android:text="@string/txt_BlackWhiteRedD"
+        android:onClick="onWhiteBlackRedDitheringClick"/>
+
+    <TextView style="@style/txt" android:id="@+id/txt_indexed"/>
+    <ImageView style="@style/txt" android:id="@+id/img_indexed" android:scaleType="fitCenter"/>
+
+    <LinearLayout style="@style/btn" android:orientation="horizontal">
+        <Button style="@style/btn50" android:text="@string/btn_okey" android:onClick="onOk"    />
+        <Button style="@style/btn50" android:text="@string/btn_cncl" android:onClick="onCancel"/>
+    </LinearLayout>
+</LinearLayout>

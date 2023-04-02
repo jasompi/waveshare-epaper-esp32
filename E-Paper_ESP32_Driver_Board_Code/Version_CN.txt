@@ -1,0 +1,23 @@
+﻿2020-08-05:  新添加5.65inch F e-paper 例程
+2020-08-05：新添加7.5inch HD e-Paper 例程
+2020-08-12：新添加3.7inch  e-Paper 例程
+2020-08-12：新添加2.66inch  e-Paper 例程
+2020-09-03：新添加5.83inch B V2 e-Paper例程
+2020-09-03：新添加2.9inch B V2 e-Paper例程
+2020-09-04：新添加1.54inch B V2 e-Paper例程
+2020-09-04：新添加2.13inch B V3 e-Paper例程
+2020-11-23：更新1.54inch V2 e-Paper例程
+2020-11-27：补充4.2inch B V2 e-Paper例程
+2020-12-01：更新7.5inch B V2 e-Paper例程
+2020-12-03：新添加2.66inch B V2 e-Paper例程
+2002-12-03：2.9inch B V2 e-Paper 改名为 2.9inch B V3 e-Paper
+2020-12-11：新添加2.9inch V2 e-Paper例程
+2020-12-16：新添加5.83inch V2 e-Paper例程
+2020-12-29：新添加4.01inch F e-Paper例程
+2021-03-19：新添加2.7inch B V2 e-Paper例程
+2021-07-29：更新7.5inch V2 e-Paper例程
+2021-10-28：实现 1.54V2 新老版本的兼容
+2021-11-03：添加新程序2.13inch V3 e-Paper例程。
+2022-04-26：添加新程序2.13inch B V4 e-Paper例程。
+2022-11-05：添加新程序2.7inch V2 e-Paper例程。
+2022-11-05：添加新程序3.52inch e-Paper例程。

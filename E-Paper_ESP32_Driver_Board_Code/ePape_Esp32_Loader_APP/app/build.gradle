@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+// 解决support-annotations版本冲突
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+}
+android {
+    signingConfigs {
+       /* config {
+            keyAlias 'waveshare'
+            keyPassword 'waveshare0755'
+            storeFile file('C:/Users/chenruiwen/Desktop/ePaperEsp32Loader/e-Paper.jks')
+            storePassword 'waveshare0755'
+        }
+
+        */
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.waveshare.epaperesp32loader"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+}
