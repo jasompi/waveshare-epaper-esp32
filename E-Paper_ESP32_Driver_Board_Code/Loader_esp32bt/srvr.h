@@ -13,6 +13,7 @@
   */ 
 
 /* Library includes ----------------------------------------------------------*/
+#include <Arduino.h>
 #include <BluetoothSerial.h>
 
 bool Srvr__btIsOn;// It's true when bluetooth is on
@@ -50,20 +51,30 @@ void Srvr__flush()
 #include "buff.h"       // POST request data accumulator
 #include "epd.h"        // e-Paper driver
 
+#define LED_BUILTIN 2
+int ledState = 0;
+
 bool Srvr__btSetup()                                              
 {
     // Name shown in bluetooth device list of App part (PC or smartphone)
     String devName("esp32");
+    pinMode(LED_BUILTIN, OUTPUT);
 
     // Turning on
     Srvr__btIsOn = Srvr__btClient.begin(devName);
 
     // Show the connection result
-    if (Srvr__btIsOn) Serial.println("Bluetooth is on");
-    else Serial.println("Bluetooth is off");
+    if (Srvr__btIsOn) {
+      Serial.println("Bluetooth is on");
+      digitalWrite(LED_BUILTIN, HIGH);
+     } else {
+      Serial.println("Bluetooth is off");
+      digitalWrite(LED_BUILTIN, LOW);
+    }
 
     // There is no connection yet
     Srvr__btConn = false;
+    
 
     // Return the connection result
     return Srvr__btIsOn;
@@ -80,11 +91,14 @@ bool Srvr__loop()
     {
         Serial.print("Bluetooth status:");
         Srvr__btConn = !Srvr__btConn;
-        if(Srvr__btConn)
+        if(Srvr__btConn) {
             Serial.println("connected"); 
-        else
+            digitalWrite(LED_BUILTIN, HIGH);
+        } else {
             Serial.println("disconnected"); 
-    }
+            digitalWrite(LED_BUILTIN, LOW);
+        }
+   }
 
     // Exit if there is no bluetooth connection
     if (!Srvr__btConn) return false; 
@@ -100,15 +114,22 @@ bool Srvr__loop()
     Buff__bufInd = 0;
 
     // While the stream of 'client' has some data do...
-    while (Srvr__available())
-    {
-        // Read a character from 'client'
-        int q = Srvr__read();
+    unsigned long start = millis();
+    int data_size = Buff__SIZE;
+    while (millis() - start < 50 && Buff__bufInd < data_size) {
+      while (Srvr__available()) {
+          // Read a character from 'client'
+          int q = Srvr__read();
 
-        // Save it in the buffer and increment its index
-        Buff__bufArr[Buff__bufInd++] = (byte)q;
+          // Save it in the buffer and increment its index
+          Buff__bufArr[Buff__bufInd++] = (byte)q;
+          if (Buff__bufArr[0] == 'L' && Buff__bufInd > 2) {
+            data_size = Buff__getWord(1);
+          }
+          start = millis();
+      }
     }
-    Serial.println();
+    Serial.printf("Received %d bytes\n", Buff__bufInd);
 
     // Initialization
     if (Buff__bufArr[0] == 'I')
@@ -119,7 +140,7 @@ bool Srvr__loop()
         EPD_dispIndex = Buff__bufArr[1];
 
         // Print log message: initialization of e-Paper (e-Paper's type)
-        Serial.printf("<<<EPD %s", EPD_dispMass[EPD_dispIndex].title);
+        Serial.printf("<<<EPD[%d] %s", EPD_dispIndex, EPD_dispMass[EPD_dispIndex].title);
 
 
         // Initialization
@@ -133,11 +154,15 @@ bool Srvr__loop()
     else if (Buff__bufArr[0] == 'L')
     {
         // Print log message: image loading
-        Serial.print("<<<LOAD");
         int dataSize = Buff__getWord(1);
         Srvr__length += dataSize;
-                
-        if ((Buff__bufInd < dataSize) || Srvr__length != Buff__getN3(3))
+        int total = Buff__getN3(3);
+
+        Serial.printf("<<<LOAD %d/%d", dataSize, total);
+        digitalWrite(LED_BUILTIN, ledState);
+        ledState = !ledState;
+               
+        if ((Buff__bufInd < dataSize) || Srvr__length != total)
         {
             Buff__bufInd = 0;
             Srvr__flush();
@@ -159,7 +184,7 @@ bool Srvr__loop()
     else if (Buff__bufArr[0] == 'N')
     {
         // Print log message: next data channel
-        Serial.print("<<<NEXT");
+        Serial.print("<<<NEXT----");
 
         // Instruction code for for writting data into 
         // e-Paper's memory
@@ -203,6 +228,6 @@ bool Srvr__loop()
     delay(1);
 
     // Print log message: the end of request processing
-    Serial.print(">>>");
+    Serial.print(">>>\n");
     return true;
 }
